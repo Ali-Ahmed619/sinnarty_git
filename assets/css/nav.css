@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --brand-blue: #0d6efd;
+  --text-dark: #212529;
+  --text-muted: #495057;
+  --border-color: #e9ecef;
+  --bg-white: #ffffff;
+}
+
+/* ===== NAVBAR BASE ===== */
+.navbar {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  width: 100%;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ===== DESKTOP LINKS ===== */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--brand-blue);
+}
+
+.nav-link.active {
+  color: var(--brand-blue);
+  border-bottom-color: var(--brand-blue);
+  font-weight: 600;
+}
+
+/* ===== ICONS ===== */
+
+/* ===== HAMBURGER (hidden on desktop) ===== */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+}
+
+.hamburger-btn span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hamburger-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== MOBILE MENU (hidden by default) ===== */
+.mobile-menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-white);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu.show {
+  max-height: 300px;
+}
+
+.mobile-menu li {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-menu .nav-link {
+  display: block;
+  padding: 14px 24px;
+  border-bottom: none;
+}
+
+.mobile-menu .nav-link.active {
+  background: #f0f6ff;
+  border-right: 3px solid var(--brand-blue);
+}
+
+/* ===== TABLET (<= 900px): tighten spacing ===== */
+@media (max-width: 900px) {
+  .navbar-links {
+    gap: 20px;
+  }
+  .navbar-container {
+    padding: 12px 18px;
+  }
+}
+
+/* ===== MOBILE (<= 640px): collapse into hamburger menu ===== */
+@media (max-width: 640px) {
+  .navbar-links {
+    display: none;
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  .navbar-logo {
+    font-size: 18px;
+  }
+}

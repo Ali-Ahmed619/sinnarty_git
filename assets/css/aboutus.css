@@ -1,0 +1,361 @@
+:root {
+    --ink: #0c1a22;
+    --amber: #e8a33d;
+    --teal: #0f6e8c;
+    --teal-deep: #0a4f66;
+    --cream: #f3ead9;
+    --paper: #ffffff;
+    --paper-soft: #f3f6f8;
+    --text-muted: #5a6b74;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fraunces', serif;
+}
+
+/* HERO  */
+.about-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(59, 77, 128, 0.616)), url('../images/knut-troim-tEjBzUns8SQ-unsplash.jpg');
+    background-size: cover;
+    background-position: 0% 80%;
+    background-repeat: no-repeat;
+}
+
+
+.about-hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 24px;
+    max-width: 640px;
+}
+
+.about-hero-text h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.about-hero-text p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+}
+
+/* SHARED SECTION SPACING */
+.section {
+    padding: 80px 48px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* MISSION  */
+.mission-section {
+    padding-top: 64px;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+}
+
+.mission-card {
+    background: var(--paper);
+    border: 1px solid #e7ebee;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 12px 30px rgba(12, 26, 34, 0.06);
+}
+
+.icon-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #e7f2f6;
+    color: var(--teal-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mission-card h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--teal-deep);
+    margin-bottom: 16px;
+}
+
+.mission-card p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.tag-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #e7f2f6;
+    color: var(--teal-deep);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 999px;
+}
+
+.mission-image {
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 280px;
+}
+
+.mission-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* OUR STORY */
+.story-section {
+    background: var(--paper-soft);
+    max-width: none;
+    padding: 80px 48px;
+}
+
+.story-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.story-collage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.story-collage img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 14px 30px rgba(12, 26, 34, 0.15);
+}
+
+.collage-bottom {
+    margin-top: 32px;
+}
+
+.eyebrow-dark {
+    display: inline-block;
+    color: var(--teal-deep);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.story-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+.story-text blockquote {
+    border-left: 3px solid var(--teal-deep);
+    padding-left: 18px;
+    margin-top: 24px;
+    font-style: italic;
+    color: var(--ink);
+    font-size: 1rem;
+}
+
+/* CREW  */
+.crew-section {
+    text-align: center;
+}
+
+.crew-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.crew-subhead {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 48px;
+}
+
+.crew-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    text-align: left;
+}
+
+.crew-card {
+    background: var(--paper);
+    border: 1px solid #e7ebee;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 26px rgba(12, 26, 34, 0.06);
+    transition: transform 0.2s ease;
+}
+.crew-card:hover {
+    transform: translateY(-6px);
+    transition: transform 0.4s linear;
+}
+
+.crew-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.crew-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 20px 24px 2px 24px;
+}
+
+.crew-role {
+    display: block;
+    margin: 0 24px 12px 24px;
+    color: var(--teal-deep);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.crew-card p {
+    margin: 0 24px 24px 24px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+}
+
+/* CTA  */
+.cta-section {
+    background: var(--teal-deep);
+    color: #fff;
+    text-align: center;
+    padding: 70px 24px;
+}
+
+.cta-section h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    margin-bottom: 32px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline-light {
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-fill-light {
+    background: var(--amber);
+    border: none;
+    color: var(--ink);
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter .2s ease;
+}
+
+.btn-fill-light:hover {
+    filter: brightness(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .crew-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 56px 24px;
+    }
+
+    .story-section {
+        padding: 56px 24px;
+    }
+}

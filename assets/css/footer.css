@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.site-footer {
+    background-color: #ffffff;
+    padding: 60px 0;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Brand Column */
+.brand-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0b1c2d;
+    margin-bottom: 20px;
+}
+
+.hook-icon {
+    width: 20px;
+    height: 20px;
+    color: #005a8c;
+    transform: rotate(-15deg);
+}
+
+.brand-col p {
+    color: #5c6875;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Headings and Links */
+.col-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0b1c2d;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #5c6875;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #005a8c;
+}
+
+/* Newsletter Column */
+.subscribe-form {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-form input {
+    padding: 12px 15px;
+    border: 1px solid #e1e4e8;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 0.9rem;
+    color: #333;
+    width: 200px;
+    font-family: inherit;
+}
+
+.subscribe-form input::placeholder {
+    color: #a0aab5;
+}
+
+.subscribe-form input:focus {
+    border-color: #005a8c;
+}
+
+.join-btn {
+    background-color: #005a8c;
+    color: #ffffff;
+    border: none;
+    padding: 13px 24px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+}
+
+.join-btn:hover {
+    background-color: #00466e;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-container {
+        justify-content: flex-start;
+    }
+    
+    .footer-col {
+        flex: 1 1 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-col {
+        flex: 1 1 100%;
+    }
+}
